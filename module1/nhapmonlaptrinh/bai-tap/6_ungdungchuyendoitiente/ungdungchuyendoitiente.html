@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>duc123</title>
+</head>
+<body>
+<form>
+    Số tiền :
+    <input type="text" id="soTien">
+    Từ :
+    <select id="chonTu">
+        <option value="VN">Viet Nam</option>
+        <option value="US">USD</option>
+    </select>
+    Sang :
+    <select id="chonSang">
+        <option value="VN">Viet Nam</option>
+        <option value="US">USD</option>
+    </select>
+    <button onclick="duchd();return false"> duchd </button>
+</form>
+<p id="ketQua">hello</p>
+<script>
+    function duchd()  {
+        let soTien = document.getElementById("soTien").value;
+        let chonTu = document.getElementById("chonTu").value;
+        let chonSang = document.getElementById("chonSang").value;
+        let ketQua = document.getElementById("ketQua");
+        if (chonTu === "VN" && chonSang === "US") {
+            ketQua.innerText = ((parseInt(soTien)) / 23000).toString();
+            alert(((parseInt(soTien)) / 23000).toString())
+        }
+    }
+
+</script>
+
+</body>
+</html>
